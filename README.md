@@ -1,65 +1,90 @@
+Credit Card Fraud Detection System
 Project Description
-The Credit Card Fraud Detection System is designed to identify fraudulent transactions in a dataset of credit card transactions. This project employs machine learning algorithms to build a model that can accurately classify transactions as either legitimate or fraudulent. The model is trained on a dataset, and predictions are made using a trained machine learning model.
+The Credit Card Fraud Detection System is a machine learning-based project that identifies fraudulent transactions in a dataset of credit card transactions. This system uses various machine learning algorithms to build a model that can accurately classify transactions as either legitimate or fraudulent.
 
-The project involves:
+The project involves the following steps:
 
 Data Preprocessing: Cleaning and preparing the dataset for machine learning.
 
 Model Training: Building and training a model using various machine learning algorithms.
 
-Model Evaluation: Evaluating the model's performance on the test dataset.
+Model Evaluation: Evaluating the performance of the model using a test dataset.
 
 Prediction: Using the trained model to make predictions on new, unseen data.
 
-Deployment: A Flask-based app for making real-time predictions, based on the trained model.
+Deployment: Creating a Flask-based application for making real-time predictions using the trained model.
 
 Dataset
-To run the project, you need the dataset for training the model. Download the dataset from the following Kaggle link:
+To run the project, you need to download the dataset from the following Kaggle link:
 
-Dataset Link: Credit Card Fraud Dataset on Kaggle
+Credit Card Fraud Dataset on Kaggle
 
-After downloading the dataset, follow these steps:
-
+Dataset Setup
 Create a folder named data in the root directory of the project.
 
 Place the downloaded dataset (creditcard.csv) inside the data folder.
 
-Also, place the CSV file directly inside the Jupyter Notebook folder for your convenience.
+Additionally, place the creditcard.csv file directly inside the Jupyter Notebook folder for convenience.
 
 File Structure
-The project consists of several Python files that handle different tasks:
+The project consists of the following files and directories:
 
-src/data_preprocessing.py: This file handles the data cleaning and preprocessing.
+bash
+Copy
+Edit
+/Credit-Card-Fraud-Detection-System
+    /data
+        creditcard.csv
+    /Jupyter Notebook
+        data_exploration.ipynb
+        training.ipynb
+    /src
+        data_preprocessing.py
+        model.py
+        predictor.py
+    /models
+        best_model.pkl
+        scaler.pkl
+    /requirements.txt
+    /README.md
+/src: Contains Python scripts for data preprocessing, model training, and prediction.
 
-src/model.py: Defines and trains the machine learning model.
+/Jupyter Notebook: Contains Jupyter notebooks for data exploration and training the model.
 
-src/predictor.py: This is the final file used for making predictions after the model is trained.
+/models: Contains saved models and scaler for future predictions.
 
-Jupyter Notebook/data_exploration.ipynb: Jupyter notebook for initial data exploration and visualization.
-
-Jupyter Notebook/training.ipynb: Jupyter notebook to train the model on the dataset.
+/data: Folder to store the dataset.
 
 Step-by-Step Instructions
-Data Preprocessing:
-Run the data_preprocessing.py file first. This will clean and preprocess the data, making it ready for training. It handles tasks like feature extraction, normalization, and preparing the data for the model.
+1. Data Preprocessing
+Run the data_preprocessing.py script first to clean and preprocess the data. This step handles tasks like feature extraction, normalization, and preparing the data for training.
 
 bash
 Copy
 Edit
 python src/data_preprocessing.py
-Model Training:
-Next, run the model.py file. This file will build the machine learning model (like Logistic Regression, XGBoost, etc.) and train it on the preprocessed dataset.
+2. Model Training
+Next, run the model.py script. This script builds and trains the machine learning model (e.g., Logistic Regression, XGBoost) on the preprocessed dataset.
 
 bash
 Copy
 Edit
 python src/model.py
-Prediction:
-After the model is trained, you can make predictions using the predictor.py file. This file will load the trained model and make predictions on new data or on the test set.
+3. Prediction
+Once the model is trained, you can use the predictor.py file to make predictions on new data or the test set.
 
 bash
 Copy
 Edit
 python src/predictor.py
+Requirements
+You can install the required libraries by running the following command:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+The requirements.txt file includes all the necessary libraries and their versions required to run the project.
+
 Conclusion
-After completing the above steps, you will have a trained model capable of predicting fraudulent credit card transactions. The final output will be a prediction of whether the transaction is legitimate or fraudulent, along with the probability of it being fraudulent.
+After completing the steps above, you will have a trained machine learning model capable of predicting fraudulent credit card transactions. The model will output whether the transaction is legitimate or fraudulent, along with the probability of it being fraudulent.
