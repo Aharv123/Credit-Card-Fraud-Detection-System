@@ -1,4 +1,3 @@
-
 Project Description
 The Credit Card Fraud Detection System is designed to identify fraudulent transactions in a dataset of credit card transactions. This project employs machine learning algorithms to build a model that can accurately classify transactions as either legitimate or fraudulent. The model is trained on a dataset, and predictions are made using a trained machine learning model.
 
@@ -12,6 +11,7 @@ Model Evaluation: Evaluating the model's performance on the test dataset.
 
 Prediction: Using the trained model to make predictions on new, unseen data.
 
+Deployment: A Flask-based app for making real-time predictions, based on the trained model.
 
 Dataset
 To run the project, you need the dataset for training the model. Download the dataset from the following Kaggle link:
